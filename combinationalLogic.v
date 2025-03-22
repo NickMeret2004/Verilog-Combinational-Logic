@@ -1,5 +1,8 @@
-module sillyfunction ( input logic a,b,c, output logic y);
+module sillyfunction (input a, b, c, output y);
 
-    assign y = ~a & ~b & ~c | a & ~b & ~c | a & ~b & c ;
-    
-end module
+  // Simple combinational logic
+  assign y = (~a & ~b & ~c) |
+             (a & ~b & ~c) |
+             (a & ~b & c);
+
+endmodule
